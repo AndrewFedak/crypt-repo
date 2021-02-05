@@ -5,5 +5,6 @@ import Root from './root/root';
 const mountNode = document.getElementById('app');
 
 ReactDOM.render(
-  <Root />, mountNode,
+  <Root />,
+  mountNode,
 );
