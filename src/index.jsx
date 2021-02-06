@@ -6,5 +6,5 @@ const mountNode = document.getElementById('app');
 
 ReactDOM.render(
   <Root />,
-  mountNode,
+  mountNode
 );

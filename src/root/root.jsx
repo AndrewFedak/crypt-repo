@@ -1,11 +1,47 @@
 import '../index.scss';
 import React from 'react';
+import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
 
-const App = () => (
-  <div className="App">
-    <p>123</p>
-    <p>123</p>
-  </div>
+import thunk from 'redux-thunk';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
+
+import urlConstants from '../constants/constants';
+import routes from '../constants/routes';
+
+import Home from '../pages/home/home';
+
+import root from './reducers/index';
+
+const initialAppState = {};
+
+const middleware = [thunk];
+
+const store = createStore(
+  combineReducers({
+    root
+  }),
+  initialAppState,
+  applyMiddleware(...middleware)
 );
+
+const App = () => {
+  return (
+    <main>
+      <BrowserRouter basename={urlConstants.CTXT}>
+        <Provider store={store}>
+          <Switch>
+            <Redirect exact from={routes.INITIAL} to={routes.HOME} />
+            <Route
+              exact
+              path={routes.HOME}
+              component={Home}
+            />
+          </Switch>
+        </Provider>
+      </BrowserRouter>
+    </main>
+  );
+};
 
 export default App;
