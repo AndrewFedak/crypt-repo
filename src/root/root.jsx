@@ -12,6 +12,7 @@ import routes from '../constants/routes';
 import Home from '../pages/home/home';
 
 import root from './reducers/index';
+import header from '../reusable/page_header/store/reducer';
 
 const initialAppState = {};
 
@@ -19,7 +20,8 @@ const middleware = [thunk];
 
 const store = createStore(
   combineReducers({
-    root
+    root,
+    header
   }),
   initialAppState,
   applyMiddleware(...middleware)
@@ -27,20 +29,18 @@ const store = createStore(
 
 const App = () => {
   return (
-    <main>
-      <BrowserRouter basename={urlConstants.CTXT}>
-        <Provider store={store}>
-          <Switch>
-            <Redirect exact from={routes.INITIAL} to={routes.HOME} />
-            <Route
-              exact
-              path={routes.HOME}
-              component={Home}
-            />
-          </Switch>
-        </Provider>
-      </BrowserRouter>
-    </main>
+    <BrowserRouter basename={urlConstants.CTXT}>
+      <Provider store={store}>
+        <Switch>
+          <Redirect exact from={routes.INITIAL} to={routes.HOME} />
+          <Route
+            exact
+            path={routes.HOME}
+            component={Home}
+          />
+        </Switch>
+      </Provider>
+    </BrowserRouter>
   );
 };
 

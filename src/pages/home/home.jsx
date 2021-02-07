@@ -5,13 +5,23 @@ import ContactUs from '../../reusable/contact_us/contact_us';
 import Advantages from '../../reusable/advantages/advantages';
 
 const Home = (props) => {
+    const homeComponent = [
+        AboutUs,
+        Advantages,
+        ContactUs
+    ];
+
     return (
-        <div>
+        <>
             <PageHeader />
-            <AboutUs />
-            <Advantages />
-            <ContactUs />
-        </div>
+            <main>
+                {homeComponent.map((Component, idx) => (
+                    <div className='full-page' key={idx}>
+                        <Component />
+                    </div>
+                ))}
+            </main>
+        </>
     );
 };
 

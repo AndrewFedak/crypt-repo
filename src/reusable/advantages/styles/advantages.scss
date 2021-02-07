@@ -1,3 +1,11 @@
 .advantages {
-    height: 100vh;
+    text-align: center;
+    .advantages-title{
+        margin-bottom: 150px;
+    }
+    .advantages-blocks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+    }
 }

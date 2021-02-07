@@ -1,37 +1,52 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
 import classNames from 'classnames';
 import navItems from './constants/nav_items';
+import {changeYCords} from './store/actions';
 
 const PageHeader = (props) => {
-    const [currentY, changePageStyle] = useState(0);
+    const {currentScrollPos: currentY, changeYCords} = props;
 
     useEffect(() => {
         window.addEventListener('scroll', (e) => {
-            changePageStyle(window.scrollY);
+            changeYCords(window.pageYOffset);
         });
     }, []);
 
     const renderNavItems = () => {
-        const heights = Object.values(navItems);
-        return Object.entries(navItems).map((nav, index) => {
-            const [navTitle, height] = nav;
-            console.log(heights[index+1] || window.innerHeight);
+        return navItems.map(({title, pageY}, index) => {
+            const nextPageY = navItems[index+1] && navItems[index+1].pageY;
+            const className= classNames({
+                'underline': pageY <= currentY && (nextPageY || document.body.scrollHeight) > currentY
+            });
             return (
-                <li className={classNames(
-                    {'underline': (heights[index+1] || window.innerHeight) - height >= currentY}
-                    )}
+                <li className={className}
                     key={index}
-                >{navTitle}</li>
+                    onClick={() => window.scrollTo(0, pageY+1)}
+                >{title}</li>
             );
         });
     };
 
     return (
-        <ul className='page-header-nav'>
-            <li>Logo</li>
-            {renderNavItems()}
-        </ul>
+        <header>
+            <ul className='page-header-nav'>
+                <li>Logo</li>
+                {renderNavItems()}
+            </ul>
+        </header>
     );
 };
 
-export default PageHeader;
+const mapStateToProps = (state) => ({
+    currentScrollPos: state.header.pageY
+});
+
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({
+        changeYCords
+    }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(PageHeader);

@@ -6,6 +6,7 @@
         "comma-dangle": ["error", "never"],
         "eol-last": ["error", "never"],
         "no-unused-vars": 1,
-        "max-len": ["error", { "code": 100 }]
+        "max-len": ["error", { "code": 150 }],
+        "require-jsdoc": 0
     }
 }
