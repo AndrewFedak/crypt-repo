@@ -6,5 +6,9 @@ export default [
     {
         title: 'НОМЕР ТЕЛЕФОНА',
         type: 'tel'
+    },
+    {
+        title: 'ВАШ ИМЕЙЛ',
+        type: 'email'
     }
 ];
