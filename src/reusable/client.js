@@ -1,5 +1,5 @@
 const types = {
-    'json': 'application/json;'
+    'json': 'application/json'
 };
 
 export default {
