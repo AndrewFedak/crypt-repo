@@ -14,6 +14,7 @@ import Home from '../pages/home/home';
 import root from './reducers/index';
 import header from '../reusable/page_header/store/reducer';
 import contactUs from '../reusable/contact_us/store/reducer';
+import home from '../pages/home/store/reducer';
 
 const initialAppState = {};
 
@@ -23,7 +24,8 @@ const store = createStore(
   combineReducers({
     root,
     header,
-    contactUs
+    contactUs,
+    home
   }),
   initialAppState,
   applyMiddleware(...middleware)

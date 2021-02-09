@@ -1,9 +1,9 @@
-import actionConstants from '../constants/constants';
+import actionConstants from './constants';
 
 const initialState = {
     isShowing: false
-}
-;
+};
+
 const RootReducer = (state = initialState, action) => {
     switch (action.type) {
         case actionConstants.HIDE_LOADER:

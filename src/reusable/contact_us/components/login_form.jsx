@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import contactUsFormInputs from '../constants/contact_us_form_inputs';
 import {sendUser} from '../store/actions';
+import recallIcon from '../../../images/recall.png';
 
 const LoginForm = ({sendUser, isSended, isShowing}) => {
     const onSubmit = (e) => {
@@ -11,6 +12,7 @@ const LoginForm = ({sendUser, isSended, isShowing}) => {
         const form = {};
         for (let i = 0; i < contactUsFormInputs.length; i++) {
             const {name, value} = target[i];
+            if (!value.trim()) return;
             form[name] = value;
         }
         sendUser(JSON.stringify(form));
@@ -25,8 +27,11 @@ const LoginForm = ({sendUser, isSended, isShowing}) => {
                     <input className='contact-us__form-input' type={type} name={name}/>
                 </label>
             ))}
-            <button type='submit' disabled={isShowing}>Submit</button>
-            {isSended && 'Ми з вами зв\'яжемося'}
+            <button type='submit' disabled={isShowing}>
+                <img src={recallIcon} alt="recall-icon"/>
+                <p>МЫ ВАМ ПЕРЕЗВОНИМ</p>
+            </button>
+            <p>{isSended && 'Ми з вами зв\'яжемося'}</p>
         </form>
     );
 };

@@ -2,11 +2,11 @@ import React, {useEffect} from 'react';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import navItems from './constants/nav_items';
 import {changeYCords} from './store/actions';
+import logo from '../../images/crypt_header.png';
 
 const PageHeader = (props) => {
-    const {currentScrollPos: currentY, changeYCords} = props;
+    const {currentScrollPos: currentY, changeYCords, navItems} = props;
 
     useEffect(() => {
         window.addEventListener('scroll', (e) => {
@@ -32,7 +32,7 @@ const PageHeader = (props) => {
     return (
         <header>
             <ul className='page-header-nav'>
-                <li><div className="logo"><img src="" alt="Logo"/><span>CRYPTONAME</span></div></li>
+                <li><div className="logo"><img src={logo} alt="Logo"/><span>CRYPTONAME</span></div></li>
                 {renderNavItems()}
             </ul>
         </header>

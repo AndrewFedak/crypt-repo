@@ -1,4 +1,4 @@
-import actionConstants from '../root/constants/constants';
+import actionConstants from '../root/reducers/constants';
 
 export function createAsyncActions(type, fn, options = {}) {
     let result;

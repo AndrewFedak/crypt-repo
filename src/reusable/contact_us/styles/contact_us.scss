@@ -2,11 +2,15 @@
 .contact-us {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto;
-    max-width: 850px;
-    width: 80%;
+    margin: 100px auto;
+    max-width: 800px;
     background: linear-gradient(206.03deg, #07C9C9 -9.66%, #09D975 135.69%);
-border-radius: 8px 8px 8px 8px;
+    border-radius: 8px;
+    &_logo{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
 .contact-us-title{
     margin-top: 4%;
     color: #ffffff;
@@ -55,22 +59,12 @@ border-radius: 8px 8px 8px 8px;
                 font-size: 21px;
                 line-height: 24px;
                 color: #fff;
+                &::-moz-focus-inner {
+                    border: 0;
+                }
             }
-            input:active{
-                outline: none;
-                border:none;
-            }
-            input::focus {
-            outline: none;
-            border:none;
-            }
-            input::-moz-focus-inner {
-                border: 0;
-            }
-            
         }
         button {
-        
             margin: auto;
             cursor: pointer;
             border-radius: 121px;
@@ -81,27 +75,30 @@ border-radius: 8px 8px 8px 8px;
             align-items: center;
             background-color: transparent;
             margin-top: 40px;
-          }
 
-          button:active,
-          button:focus {
-            outline: none;
-          }
-          
-          
-          button p{
-            background: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            padding: 0;
-            margin: 0;
-            font-size: 18px;
-            line-height: 26px;
-          }
-          
-          button img {
-            padding-right: 4px;
-          }
+            &:active,
+            &:focus {
+                outline: none;
+            }
+
+            &:disabled {
+                cursor: default;
+                background-color: gray;
+            }
+
+            & p{
+                background: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                padding: 0;
+                margin: 0;
+                font-size: 18px;
+                line-height: 26px;
+            }
+            & img {
+                padding-right: 4px;
+            }
+        }
     }
     
 }

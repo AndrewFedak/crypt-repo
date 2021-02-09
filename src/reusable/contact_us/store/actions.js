@@ -1,4 +1,4 @@
-import {createAsyncActions} from '../../../utils/uc_thunk_utils';
+import {createAsyncActions} from '../../../utils/thunk_utils';
 import dao from './dao';
 import actionConstants from './constants';
 
