@@ -1,11 +1,57 @@
 .advantages {
+    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
     text-align: center;
+
     .advantages-title{
-        margin-bottom: 150px;
+        margin-top: 12%;
+        color: #000000;
+        text-align: center;
+        font-size: 50px;
+        line-height: 61px;
+        font-weight: 600px;
+        display: block;
     }
+    .advantages-title::after{
+        position: relative;
+        content: "";
+        display: block;
+        height: 1px;
+        background: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);
+        max-width: 470px;
+        width: 70%;
+        margin: auto;
+        margin-top: 14px;
+    }
+    
     .advantages-blocks {
+        display: block;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 30px;
+
+        h3{
+            font-style: normal;
+            font-weight: 800;
+            font-size: 23px;
+            line-height: 28px;
+            margin: 0;
+            margin-bottom: 10px;
+            margin-top: 28px;
+        }
+        p{
+            margin: 0;
+            font-weight: 600;
+font-size: 11px;
+line-height: 13px;
+text-align: center;
+        }
     }
+    .cursor{
+        width: 40px;
+        display: block;
+      }
 }

@@ -14,6 +14,7 @@ const Advantages = (props) => {
                     </div>
                 ))}
             </div>
+            <img src="" alt="cursor" className="cursor"/>
         </div>
     );
 };
