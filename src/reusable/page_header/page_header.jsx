@@ -32,7 +32,7 @@ const PageHeader = (props) => {
     return (
         <header>
             <ul className='page-header-nav'>
-                <li><div class="logo"><img src="" alt="Logo"/><span>CRYPTONAME</span></div></li>
+                <li><div className="logo"><img src="" alt="Logo"/><span>CRYPTONAME</span></div></li>
                 {renderNavItems()}
             </ul>
         </header>
