@@ -24,7 +24,7 @@ const PageHeader = (props) => {
                 <li className={className}
                     key={index}
                     onClick={() => window.scrollTo(0, pageY+1)}
-                >{title}</li>
+                ><span className={className}>{title}</span></li>
             );
         });
     };
@@ -32,7 +32,7 @@ const PageHeader = (props) => {
     return (
         <header>
             <ul className='page-header-nav'>
-                <li>Logo</li>
+                <li><div class="logo"><img src="" alt="Logo"/><span>CRYPTONAME</span></div></li>
                 {renderNavItems()}
             </ul>
         </header>

@@ -11,11 +11,35 @@ header{
         margin: 10px;
         list-style-type: none;
         li {
+            cursor: pointer;
             &:not(:first-child){
-                text-align: center;
+                    display: flex;
+                    span {
+                        display: block;
+                        margin: auto;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px; 
+                    }
             }
-            &.underline{
-                text-decoration: underline;
+            &.underline {
+                border-bottom: 1px solid #000;
+                padding-bottom: 1px;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                span {
+                    display: block;
+                    font-family: Quantico;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 30px;
+                    line-height: 43px;
+                }
             }
         }
     }

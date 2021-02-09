@@ -13,7 +13,10 @@ const ContactUs = (props) => {
                         <input className='contact-us__form-input' type={type} />
                     </label>
                 ))}
-                <button type='submit'>Submit</button>
+                 <button type='submit'>
+                    <img src="call.svg" alt=""/>
+                    <p>МЫ ВАМ ПЕРЕЗВОНИМ</p>
+                </button>
             </form>
         </div>
     );
