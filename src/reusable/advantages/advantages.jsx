@@ -2,6 +2,7 @@ import React from 'react';
 import advantagesBlocks from './constants/advantages_blocks_constants';
 
 const Advantages = (props) => {
+    console.log(advantagesBlocks);
     return (
         <div className='advantages'>
             <h1 className='advantages-title'>ПОЧЕМУ ИМЕННО МЫ?</h1>

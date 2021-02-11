@@ -1,4 +1,7 @@
 import React from 'react';
+import logo from '../../images/crypt.png';
+import recallIcon from '../../images/recall.png';
+import mouseIcon from '../../images/mouse.png';
 
 const AboutUs = (props) => {
     return (
@@ -10,15 +13,15 @@ const AboutUs = (props) => {
                         контекстной рекламы (PPC) и других инструментов интернет-маркетинга для сайтов в тематике криптовалют.<br></br>
                         Основной показатель качества нашей работы — прибыль для вашего бизнеса.</p>
                 </div>
-                <img src='' alt='logo' />
+                <img src={logo} alt='logo' />
             </div>
             <div className='about-us-button'>
                 <button>
-                    <img src="call.svg" alt=""/>
+                    <img src={recallIcon} alt="recall-icon"/>
                     <p>МЫ ВАМ ПЕРЕЗВОНИМ</p>
                 </button>
             </div>
-            <img src="" alt="cursor" className="cursor"/>
+            <img src={mouseIcon} alt="cursor" className="cursor"/>
         </div>
     );
 };
