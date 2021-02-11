@@ -13,6 +13,7 @@ import Home from '../pages/home/home';
 
 import root from './reducers/index';
 import header from '../reusable/page_header/store/reducer';
+import contactUs from '../reusable/contact_us/store/reducer';
 
 const initialAppState = {};
 
@@ -21,7 +22,8 @@ const middleware = [thunk];
 const store = createStore(
   combineReducers({
     root,
-    header
+    header,
+    contactUs
   }),
   initialAppState,
   applyMiddleware(...middleware)

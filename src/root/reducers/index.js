@@ -1,6 +1,21 @@
+import actionConstants from '../constants/constants';
 
-const RootReducer = (state = {}, action) => {
+const initialState = {
+    isShowing: false
+}
+;
+const RootReducer = (state = initialState, action) => {
     switch (action.type) {
+        case actionConstants.HIDE_LOADER:
+            return {
+                ...state,
+                isShowing: false
+            };
+        case actionConstants.SHOW_LOADER:
+            return {
+                ...state,
+                isShowing: true
+            };
         default:
             return state;
     }

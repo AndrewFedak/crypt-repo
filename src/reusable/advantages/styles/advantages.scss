@@ -29,10 +29,15 @@
     
     .advantages-blocks {
         display: block;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 30px;
-
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+flex-wrap: wrap;
+width: 100%;
+.advantages-blocks_block{
+width: 270px;
+margin: auto;
+margin-top: 30px;
         h3{
             font-style: normal;
             font-weight: 800;
@@ -50,8 +55,54 @@ line-height: 13px;
 text-align: center;
         }
     }
+    }
     .cursor{
         width: 40px;
         display: block;
       }
+}
+
+@media(max-width:1100px){
+    .advantages {
+        height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items:center;
+        text-align: center;
+    
+        .advantages-title{
+            font-size: 40px;
+            
+        }
+        .advantages-title::after{
+            width: 60%;
+            margin-top: 5px;
+        }
+        
+        .advantages-blocks {
+
+    
+            h3{
+                font-style: normal;
+                font-weight: 800;
+                font-size: 23px;
+                line-height: 28px;
+                margin: 0;
+                margin-bottom: 10px;
+                margin-top: 28px;
+            }
+            p{
+                margin: 0;
+                font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+            }
+        }
+        .cursor{
+            width: 40px;
+            display: block;
+          }
+    }
 }

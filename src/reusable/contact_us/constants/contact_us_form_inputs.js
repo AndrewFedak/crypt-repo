@@ -1,14 +1,17 @@
 export default [
     {
         title: 'ВАШЕ ИМЯ',
-        type: 'text'
+        type: 'text',
+        name: 'name'
     },
     {
         title: 'НОМЕР ТЕЛЕФОНА',
-        type: 'tel'
+        type: 'tel',
+        name: 'phone'
     },
     {
         title: 'ВАШ ИМЕЙЛ',
-        type: 'email'
+        type: 'email',
+        name: 'email'
     }
 ];
