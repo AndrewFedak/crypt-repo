@@ -16,9 +16,9 @@ const pages = [
 ];
 
 export const setPositionForNav = () => (dispatch) => {
-    const changedPages = pages.map((item) => ({
+    const changedPages = pages.map((item, idx) => ({
         ...item,
-        pageY: document.querySelector(`.${item.class}`).getBoundingClientRect().y
+        pageY: document.querySelector(`.full-page-${idx}`).getBoundingClientRect().y
     }));
     dispatch({type: actionConstants.SET_PAGES_COORD, payload: changedPages});
 };

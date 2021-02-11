@@ -1,84 +1,68 @@
 .about-us {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items:center; 
-    &-description {
-        margin-top: 12%;
-        display: flex;
-        align-items:center;
-        justify-content: space-between;
-
-        
-        div{
-          width: 70%;
-            h1{
-                font-family: Quantico;
-                font-size: 97px;
-                font-weight: 400;
-                margin: 0;
-                line-height:1;
-                padding-bottom: 25px;
-                border-bottom: 1px solid transparent;
-                background: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                display: inline-block;
-                border-image: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);;
-                border-image-slice: 1;
-            }
-            p{
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                padding-top: 26px;
-                font-style: normal;
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 24px;
-            }
-        }
-img{
-  margin: auto;
-  display: block;
-  max-width: 230px;
-  width: 100%;
-  padding: 20px;
-  
-}
-       
+  align-items: center;
+  &-description {
+    margin-top: 12%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    div{
+      width: 70%;
+      h1{
+          font-family: Quantico;
+          font-size: 97px;
+          font-weight: 400;
+          margin: 0;
+          line-height:1;
+          padding-bottom: 25px;
+          border-bottom: 1px solid transparent;
+          background: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: inline-block;
+          border-image: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);;
+          border-image-slice: 1;
+      }
+      p{
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          padding-top: 26px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 24px;
+      }
     }
+  }
+  &-button {
+    text-align: center;
     button {
-        
-        margin: auto;
-        cursor: pointer;
-        border-radius: 121px;
-        display: block;
-        border: 1px solid #00ffea;
-        padding: 30px 23px;
-        display: flex;
-        align-items: center;
-        background-color: transparent;
-        transition: background-color 0.8s ease-out;
-        -webkit-transition: background-color 0.8s ease-out;
-        -moz-transition: background-color 0.8s ease-out;
-        -ms-transition: background-color 0.8s ease-out;
-        -o-transition: background-color 0.8s ease-out;
-      }
-      
-      button:hover {
+      margin: auto;
+      cursor: pointer;
+      border-radius: 121px;
+      display: block;
+      border: 1px solid #00ffea;
+      padding: 23px;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      transition: background-color 0.8s ease-out;
+      -webkit-transition: background-color 0.8s ease-out;
+      -moz-transition: background-color 0.8s ease-out;
+      -ms-transition: background-color 0.8s ease-out;
+      -o-transition: background-color 0.8s ease-out;
+  
+      &:hover {
         background-color: #000000;
-      
       }
-      
-      button:active,
-      button:focus {
+  
+      &:active,
+      &:focus {
         outline: none;
       }
-      
-      
-      button p{
+
+      & p{
         background: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -87,14 +71,12 @@ img{
         font-size: 21px;
         line-height: 30px;
       }
-      
-      button img {
-        padding-right: 4px;
+
+      & img {
+        margin-right: 10px;
       }
-      .cursor{
-        width: 40px;
-        display: block;
-      }
+    }
+  }
 }
 
 @media(max-width:1250px){

@@ -23,11 +23,11 @@ header{
                         font-weight: 600;
                         font-size: 16px;
                         line-height: 19px; 
+                        &.underline {
+                            border-bottom: 1px solid #000;
+                            padding-bottom: 1px;
+                        }
                     }
-            }
-            &.underline {
-                border-bottom: 1px solid #000;
-                padding-bottom: 1px;
             }
             .logo {
                 display: flex;

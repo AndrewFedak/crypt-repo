@@ -1,7 +1,7 @@
 import actionsConstants from './constants';
 
 const initialState = {
-    pageY: window.pageYOffset
+    pageY: 0
 };
 
 const HeaderReducer = (state = initialState, action) => {

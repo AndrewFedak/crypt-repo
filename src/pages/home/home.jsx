@@ -27,7 +27,7 @@ const Home = ({setPositionForNav, navItems}) => {
             <PageHeader navItems={navItems}/>
             <main>
                 {homeComponent.map((Component, idx) => (
-                    <div className='full-page' key={idx}>
+                    <div className={'full-page full-page-' + idx} key={idx}>
                         <Component />
                     </div>
                 ))}

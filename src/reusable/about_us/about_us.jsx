@@ -20,8 +20,10 @@ const AboutUs = (props) => {
                     <img src={recallIcon} alt="recall-icon"/>
                     <p>МЫ ВАМ ПЕРЕЗВОНИМ</p>
                 </button>
+                <span>
+                    <img src={mouseIcon} alt="cursor" className="cursor"/>
+                </span>
             </div>
-            <img src={mouseIcon} alt="cursor" className="cursor"/>
         </div>
     );
 };
