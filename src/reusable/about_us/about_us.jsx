@@ -1,8 +1,7 @@
 import React from 'react';
 import logo from '../../images/crypt.png';
 import recallIcon from '../../images/recall.png';
-import mouseIcon from '../../images/mouse.png';
-import cursorIcon from '../../images/cursor.png';
+import ButtonAndCursor from '../button_cursor';
 
 const AboutUs = (props) => {
     return (
@@ -21,10 +20,7 @@ const AboutUs = (props) => {
                     <img src={recallIcon} alt="recall-icon"/>
                     <p>МЫ ВАМ ПЕРЕЗВОНИМ</p>
                 </button>
-                <button className='cursor'>
-                    <img src={mouseIcon} alt="mouse" /><br />
-                    <img src={cursorIcon} alt="cursor" />
-                </button>
+                <ButtonAndCursor />
             </div>
         </div>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import advantagesBlocks from './constants/advantages_blocks_constants';
-import cursorIcon from '../../images/cursor.png';
+import ButtonAndCursor from '../../reusable/button_cursor';
 
 const Advantages = (props) => {
     return (
@@ -15,9 +15,7 @@ const Advantages = (props) => {
                     </div>
                 ))}
             </div>
-            <button className='cursor'>
-                <img src={cursorIcon} alt="cursor" />
-            </button>
+            <ButtonAndCursor />
         </div>
     );
 };
