@@ -2,44 +2,41 @@
 .contact-us {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 100px auto;
-    max-width: 800px;
+    min-height: 580px;
     background: linear-gradient(206.03deg, #07C9C9 -9.66%, #09D975 135.69%);
     border-radius: 8px;
+    max-width: 900px;
+    margin: 0 auto;
     &_logo{
         display: grid;
         align-items: center;
         justify-content: center;
+        padding: 40px;
+        box-sizing: border-box;
     }
-.contact-us-title{
-    margin-top: 4%;
-    color: #ffffff;
-    text-align: center;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: 600px;
-    display: block;
-    margin-bottom: 60px;
-}
-.contact-us-title::after{
-    position: relative;
-    content: "";
-    display: block;
-    height: 1px;
-    background: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);
-    max-width: 470px;
-    width: 85%;
-    margin: auto;
-    margin-top: 1px;
-}
+    &-title{
+        text-align: center;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 600px;
+        display: block;
+        margin-bottom: 60px;
+    }
+    &-title::after{
+        position: relative;
+        content: "";
+        display: block;
+        height: 1px;
+        background: linear-gradient(90.17deg, #00FFFF 0.17%, #00FF85 99.89%);
+        max-width: 470px;
+        width: 85%;
+        margin: auto;
+        margin-top: 1px;
+    }
 
     &__form {
-        display: flex;
-        flex-direction: column;
         background: #031230;
-        border-radius: 0px 8px 8px 0px;
-        padding: 25px;
-        padding-bottom: 45px;
+        padding: 20px;
         &-label {
             display: flex;
             flex-direction: column;
@@ -49,7 +46,6 @@
                 font-size: 21px;
                 line-height: 24px;
                 padding-bottom: 10px;
-                color: #fff;
             }
             input{
                 background-color: transparent;
@@ -96,15 +92,24 @@
                 line-height: 26px;
             }
             & img {
-                padding-right: 4px;
+                margin-right: 10px;
             }
+        }
+    }
+    & .successfully {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        background-color: #031230;
+        border-radius: 8px 0 0 8px;
+        p {
+            width: 90%;
+            margin: 0 auto;
         }
     }
     
 }
 .advantages-title{
-    margin-top: 7%;
-    color: #000000;
     text-align: center;
     font-size: 50px;
     line-height: 61px;
@@ -121,4 +126,10 @@
     width: 70%;
     margin: auto;
     margin-top: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact-us {
+        display: block;
+    }
 }

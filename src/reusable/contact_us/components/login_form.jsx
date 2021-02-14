@@ -5,7 +5,7 @@ import contactUsFormInputs from '../constants/contact_us_form_inputs';
 import {sendUser} from '../store/actions';
 import recallIcon from '../../../images/recall.png';
 
-const LoginForm = ({sendUser, isSended, isShowing}) => {
+const LoginForm = ({sendUser, isShowing}) => {
     const onSubmit = (e) => {
         e.preventDefault();
         const target = e.target;
@@ -31,13 +31,11 @@ const LoginForm = ({sendUser, isSended, isShowing}) => {
                 <img src={recallIcon} alt="recall-icon"/>
                 <p>МЫ ВАМ ПЕРЕЗВОНИМ</p>
             </button>
-            <p>{isSended && 'Ми з вами зв\'яжемося'}</p>
         </form>
     );
 };
 
 const mapStateToProps = (state) => ({
-    isSended: state.contactUs.isSended,
     isShowing: state.root.isShowing
 });
 

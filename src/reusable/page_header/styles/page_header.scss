@@ -1,9 +1,10 @@
 header{
-    position: relative;
+    position: fixed;
+    width: 100%;
     .page-header-nav {
         display: grid;
-        position: fixed;
         grid-template-columns: auto repeat(3, 200px);
+        color: white;
         padding: 10px 10%;
         right: 0;
         top: 0;
@@ -13,21 +14,21 @@ header{
         li {
             cursor: pointer;
             &:not(:first-child){
-                    display: flex;
-                    span {
-                        display: block;
-                        margin: auto;
-                        text-align: center;
-                        font-family: Montserrat;
-                        font-style: normal;
-                        font-weight: 600;
-                        font-size: 16px;
-                        line-height: 19px; 
-                        &.underline {
-                            border-bottom: 1px solid #000;
-                            padding-bottom: 1px;
-                        }
+                display: flex;
+                span {
+                    display: block;
+                    margin: auto;
+                    text-align: center;
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 19px; 
+                    &.underline {
+                        border-bottom: 1px solid #fff;
+                        padding-bottom: 1px;
                     }
+                }
             }
             .logo {
                 display: flex;
@@ -39,6 +40,23 @@ header{
                     font-weight: normal;
                     font-size: 30px;
                     line-height: 43px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    header{
+        .page-header-nav {
+            grid-template-columns: auto repeat(3, auto);
+            padding: 0;
+            color: white;
+            li {
+                &:not(:first-child){ 
+                    span {
+                        font-size: 14px;
+                    }
                 }
             }
         }

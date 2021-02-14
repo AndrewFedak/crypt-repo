@@ -1,19 +1,11 @@
 .advantages {
-    height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items:center;
     text-align: center;
 
     .advantages-title{
-        margin-top: 12%;
-        color: #000000;
         text-align: center;
         font-size: 50px;
         line-height: 61px;
         font-weight: 600px;
-        display: block;
     }
     .advantages-title::after{
         position: relative;
@@ -28,61 +20,11 @@
     }
     
     .advantages-blocks {
-        display: block;
-display: flex;
-align-items: flex-start;
-justify-content: space-between;
-flex-wrap: wrap;
-width: 100%;
-.advantages-blocks_block{
-width: 270px;
-margin: auto;
-margin-top: 30px;
-        h3{
-            font-style: normal;
-            font-weight: 800;
-            font-size: 23px;
-            line-height: 28px;
-            margin: 0;
-            margin-bottom: 10px;
-            margin-top: 28px;
-        }
-        p{
-            margin: 0;
-            font-weight: 600;
-font-size: 11px;
-line-height: 13px;
-text-align: center;
-        }
-    }
-    }
-    .cursor{
-        width: 40px;
-        display: block;
-      }
-}
-
-@media(max-width:1100px){
-    .advantages {
-        height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items:center;
-        text-align: center;
-    
-        .advantages-title{
-            font-size: 40px;
-            
-        }
-        .advantages-title::after{
-            width: 60%;
-            margin-top: 5px;
-        }
-        
-        .advantages-blocks {
-
-    
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        .advantages-blocks_block{
+        margin-top: 30px;
             h3{
                 font-style: normal;
                 font-weight: 800;
@@ -93,16 +35,22 @@ text-align: center;
                 margin-top: 28px;
             }
             p{
-                margin: 0;
+                margin: 0 auto;
                 font-weight: 600;
-    font-size: 11px;
-    line-height: 13px;
-    text-align: center;
+                font-size: 11px;
+                line-height: 13px;
+                text-align: center;
+                width: 80%;
             }
         }
-        .cursor{
-            width: 40px;
-            display: block;
-          }
+    }
+    .cursor{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .advantages .advantages-blocks {
+        grid-template-columns: 1fr;
     }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import advantagesBlocks from './constants/advantages_blocks_constants';
+import cursorIcon from '../../images/cursor.png';
 
 const Advantages = (props) => {
-    console.log(advantagesBlocks);
     return (
         <div className='advantages'>
             <h1 className='advantages-title'>ПОЧЕМУ ИМЕННО МЫ?</h1>
@@ -15,7 +15,9 @@ const Advantages = (props) => {
                     </div>
                 ))}
             </div>
-            <img src="" alt="cursor" className="cursor"/>
+            <button className='cursor'>
+                <img src={cursorIcon} alt="cursor" />
+            </button>
         </div>
     );
 };

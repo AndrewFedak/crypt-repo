@@ -12,11 +12,24 @@ body {
 
 main {
     padding: 0 150px;
+    background: url('../src/images/background.png') no-repeat center center fixed;
+    color: white;
+    background-size: cover;
 }
 
 .full-page {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 100px 0;
+}
+
+.cursor {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    .full-page {
+        padding: 40px 0
+    }
 }
